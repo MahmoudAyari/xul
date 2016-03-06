@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+
+<window title="Gestion des caisses de recouvrement"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		width="700px"
+		height="420px"><script type="application/javascript" src="chrome://myapp/content/main.js"/>
+    <vbox>
+        <groupbox>
+        <hbox>
+            <vbox>
+                <label value="" control="some-text" flex="1"/>
+                <label value="Code" control="some-text" flex="1"/>
+                <label value="Nom" control="some-text2" flex="1"/>
+                <label value="Adresse" control="some-text3" flex="1"/>
+                <label value="Code Postal et ville" control="some-text4" flex="1"/>
+                <label value="Numéro d'affiliation à la caisse" control="some-text5" flex="1"/>
+                <label value="Plafond de référence (P)" control="some-text6" flex="1"/>
+            </vbox>
+            <vbox flex="1">
+                <hbox> 
+                    <label value="Code" control="some-text" flex="1"/>
+                    <textbox id="some-text" value="URSSAF" disabled="true" flex="2"/>       		
+                    <button id="modifier" class="dialog" label="modifier" disabled="true"/>
+                    <button id="ajouter" class="dialog" label="ajouter (+)" disabled="true" accesskey="+"/>
+                    <button id="fermer" class="dialog" label="fermer" disabled="true"/>
+                    
+                </hbox>
+                <textbox id="some-text" value="URSSAF" disabled="false" flex="2"/>  
+                <textbox id="some-text2" value="U.R.S.S.A.F. DE SEINE ET MARNE" flex="2"/>
+                <textbox id="some-text3" value="6,rue René Cassin" flex="2"/>
+                <textbox id="some-text31" value=""/>
+                <hbox>
+                    <textbox id="some-text4" value="77023"/>
+                    <textbox id="some-text41" value="MELIN CEDEX" flex="2"/>
+                </hbox>
+                <textbox id="some-text5" value="7701167450171" flex="1"/>
+                <textbox id="some-text6" value="2773.00" flex="1"/>
+            </vbox>
+        </hbox>
+        </groupbox>
+    </vbox>
+    <vbox>
+        <groupbox>
+        <caption label="Tranches"/>
+        <hbox>
+            <label value="Code"/>
+            <vbox>
+                <textbox class="some-text7" value="A"/>
+                <textbox class="some-text7" value=" "/>
+                <textbox class="some-text7" value=" "/>
+            </vbox>
+            <label value="de"/>
+            <vbox>
+                <menulist>
+                    <menupopup>
+                        <menuitem label="0" selected="true"/>
+                    </menupopup>
+                </menulist>
+                <menulist>
+                    <menupopup>
+                        <menuitem label=" " selected="true"/>
+                    </menupopup>
+                </menulist>
+                <menulist>
+                    <menupopup>
+                        <menuitem label=" " selected="true"/>
+                    </menupopup>
+                </menulist>
+            </vbox>
+            <label value="P à"/>
+            <vbox>
+                <menulist>
+                    <menupopup>
+                        <menuitem label="1" selected="true"/>
+                    </menupopup>
+                </menulist>
+                <menulist>
+                    <menupopup>
+                        <menuitem label=" " selected="true"/>
+                    </menupopup>
+                </menulist>
+                <menulist>
+                    <menupopup>
+                        <menuitem label=" " selected="true"/>
+                    </menupopup>
+                </menulist>
+            </vbox>
+            <label value="P"/>
+        </hbox>
+        </groupbox>
+    <hbox>
+        <spacer flex="1"/>
+        <button id="valider" class="dialog" label="Valider"/>
+        <button id="annuler" class="dialog" label="Abandonner"/>
+    </hbox>
+    </vbox>
+</window>
